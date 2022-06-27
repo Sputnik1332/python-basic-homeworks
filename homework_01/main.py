@@ -35,3 +35,14 @@ def filter_numbers(numbers_list, filter):
         return [number for number in numbers_list if number % 2]
     if filter == EVEN:
         return [number for number in numbers_list if number % 2 == 0]
+    if filter == PRIME:
+        return filter(is_prime, numbers_list)
+
+def is_prime(number):
+    x = 2
+    while number % x:
+        x += 1
+    if x == number:
+        return x
+
+
