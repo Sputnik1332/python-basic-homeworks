@@ -40,6 +40,11 @@ def filter_numbers(numbers_list, filter_type):
 
 
 def is_prime(number):
+    """
+    Check if number is prime
+    :param number:
+    :return: number
+    """
     x = 2
     while number % x and x <= number:
         x += 1
