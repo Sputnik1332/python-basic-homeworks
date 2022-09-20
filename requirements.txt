@@ -1,0 +1,6 @@
+aiohttp==3.8.1
+anyio==3.6.1
+Faker==8.1.2
+pytest==7.1.2
+pytest-asyncio==0.15.1
+SQLAlchemy==1.4.41
