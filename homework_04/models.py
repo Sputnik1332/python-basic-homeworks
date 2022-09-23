@@ -60,7 +60,7 @@ class User(Base):
 
 
 class Post(Base):
-    user_id = Column(Integer, ForeignKey('users.id'), unique=True, nullable=False)
+    user_id = Column(Integer, ForeignKey('users.id'), unique=False, nullable=False)
     title = Column(String)
     body = Column(Text, nullable=False, default="N/A")
 
