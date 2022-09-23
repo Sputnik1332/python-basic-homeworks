@@ -10,7 +10,7 @@
 
 import os
 
-from sqlalchemy import Column, Integer, String, Text
+from sqlalchemy import Column, Integer, String, Text, ForeignKey
 from sqlalchemy.orm import sessionmaker, declared_attr, declarative_base, relationship
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, AsyncEngine
 
