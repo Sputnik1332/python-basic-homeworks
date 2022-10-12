@@ -1,0 +1,13 @@
+{% extends 'items/base.html' %}
+
+{% block title %}
+    {{ item.name }} details
+{% endblock %}
+
+{% block body %}
+  <h1>Item <strong>{{ item.name }}</strong></h1>
+  <div>
+    <p><strong>Description</strong>: {{ item.description }}</p>
+  </div>
+    <a href="{% url 'items:index' %}">Back to items list</a>
+{% endblock %}

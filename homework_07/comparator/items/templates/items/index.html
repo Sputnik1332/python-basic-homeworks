@@ -1,0 +1,18 @@
+{% extends 'items/base.html' %}
+
+{% block title %}
+  Items list
+{% endblock %}
+
+{% block body %}
+  <h1>Items list</h1>
+  <ul class="list-group">
+      {% for item in items %}
+        <li class="list-group-item">
+            <a href="{% url 'items:details' item.pk %}">
+                {{ item.name }}
+            </a>
+        </li>
+      {% endfor %}
+  </ul>
+{% endblock %}
