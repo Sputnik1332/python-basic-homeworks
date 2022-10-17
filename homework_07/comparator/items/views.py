@@ -2,7 +2,7 @@ from django.http import HttpRequest
 from django.shortcuts import render, get_object_or_404
 
 from .models import Item
-from .tasks import parse
+# from .tasks import parse
 
 
 def index(request: HttpRequest):
