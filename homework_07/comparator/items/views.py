@@ -17,6 +17,6 @@ def details(request: HttpRequest, pk: int):
         "item": get_object_or_404(Item, pk=pk),
     }
 
-    price = parse.delay(Item.url)
+    # price = parse.delay(Item.url)
 
     return render(request=request, template_name="items/details.html", context=context)
