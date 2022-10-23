@@ -1,5 +1,12 @@
-from django.views.generic import ListView, DetailView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.urls import reverse
+from django.views.generic import (
+    ListView,
+    DetailView,
+    CreateView,
+)
 
+from .forms import ItemCreateForm
 from .models import Item
 # from .tasks import parse
 
@@ -15,6 +22,14 @@ class ItemsListView(ListView):
         .order_by("pk")
         .all()
     )
+
+
+class ItemCreateView(LoginRequiredMixin, CreateView):
+    model = Item
+    form_class = ItemCreateForm
+
+    def get_success_url(self):
+        return reverse("items:details", kwargs={"pk": self.object.pk})
 
 
 class ItemDetailView(DetailView):
