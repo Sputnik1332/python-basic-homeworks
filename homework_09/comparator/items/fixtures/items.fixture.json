@@ -1,0 +1,22 @@
+[
+  {
+    "model": "items.item",
+    "pk": 1,
+    "fields": {
+      "name": "First item",
+      "url": "",
+      "description": "Some description",
+      "price": null
+    }
+  },
+  {
+    "model": "items.item",
+    "pk": 2,
+    "fields": {
+      "name": "monitor",
+      "url": "https://shop.com/goods/monitors/1",
+      "description": "some monitor",
+      "price": 129.99
+    }
+  }
+]
